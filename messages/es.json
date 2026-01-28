@@ -1,0 +1,156 @@
+{
+    "Metadata": {
+        "title": "Javier Goldschmidt | Ingeniero Full Stack Senior",
+        "description": "Construyendo plataformas de ciencia digital y sistemas web escalables. Actualmente en El Gato y La Caja."
+    },
+    "Hero": {
+        "title": "Javier Goldschmidt",
+        "role": "Ingeniero Full Stack Senior",
+        "description": "Construyendo sistemas escalables y plataformas digitales responsivas para la web.",
+        "about1": "Soy un desarrollador con <highlight>12 años de experiencia</highlight> creando desde videojuegos en Unity hasta plataformas web complejas. Mi trabajo se sitúa en la intersección de una <highlight>ingeniería robusta</highlight> y un <highlight>diseño de producto minucioso</highlight>.",
+        "about2": "Actualmente, soy Senior Engineer en <link>El Gato y La Caja</link>, donde he pasado los últimos 9 años construyendo la infraestructura digital para una plataforma de divulgación científica masiva—desde sistemas SSO personalizados hasta dashboards de analíticas e integraciones de e-commerce.",
+        "about3": "Me especializo en <highlight>frontends responsivos en React</highlight> y <highlight>backends complejos en Node/PHP</highlight>, con profundas raíces en el desarrollo de videojuegos y aplicaciones móviles nativas."
+    },
+    "Nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "contact": "Contacto"
+    },
+    "Contact": {
+        "title": "Contacto",
+        "description": "Si querés charlar sobre un proyecto o simplemente saludar, siempre estoy abierto a conversar.",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
+    "Timeline": {
+        "experience": "Experiencia",
+        "education": "Educación",
+        "entries": {
+            "elgato": {
+                "period": "2017 — Presente",
+                "title": "Desarrollador Full Stack",
+                "company": "El Gato y La Caja",
+                "description": "Comencé como la primera contratación técnica. Construí el stack web fundacional y establecí prácticas de ingeniería que escalaron con la empresa. Ahora lidero el desarrollo de infraestructura digital. Construí sistemas SSO, herramientas de análisis e integraciones de e-commerce sirviendo a más de 50k usuarios."
+            },
+            "freelance": {
+                "period": "2014 — 2017",
+                "title": "Desarrollador Web y Mobile",
+                "description": "Trabajo freelance construyendo aplicaciones Web y Android. Lancé múltiples proyectos y aprendí los fundamentos de optimización de rendimiento y experiencia de usuario."
+            },
+            "university": {
+                "period": "2025 — Presente",
+                "title": "Ciclo de Licenciatura en Tecnologías Digitales",
+                "company": "Universidad de la Ciudad de Buenos Aires"
+            },
+            "davinci": {
+                "period": "2017 — 2020",
+                "title": "Técnico en Desarrollo de Videojuegos",
+                "company": "Escuela Da Vinci"
+            },
+            "udacity": {
+                "period": "2016",
+                "title": "Nanodegree en Desarrollo Android",
+                "company": "Udacity + Google"
+            },
+            "fader": {
+                "period": "2010 — 2015",
+                "title": "Diseño y Promoción Publicitaria",
+                "company": "Escuela Técnica Fernando Fader"
+            }
+        }
+    },
+    "SelectedWork": {
+        "title": "Proyectos Destacados",
+        "projects": {
+            "gridx-ecosystem": {
+                "title": "GridX: Ecosistema Deep Tech",
+                "shortDescription": "Plataforma de alto rendimiento para el Company Builder de biotecnología más grande de LatAm.",
+                "fullDescription": "El hub digital central para una incubadora de startups biotecnológicas. Necesitábamos una plataforma que pudiera servir datos científicos complejos a inversores globales manteniendo la facilidad de actualización para personal no técnico.",
+                "impact": {
+                    "0": "Arquitectura de sistema de Internacionalización (i18n) escalable sirviendo contenido en Inglés, Español y Portugués con baja latencia",
+                    "1": "Frontend controlado por WordPress y constructor de formularios donde los admins pueden enrutar envíos a bases de Airtable específicas o Emails basados en lógica",
+                    "2": "Implementación de optimización de video de alto rendimiento para activos generados por IA, asegurando un rápido Time-to-Interactive (TTI)",
+                    "3": "Construcción de sistema de portafolio dinámico gestionando datos para 90+ startups con filtrado en tiempo real"
+                },
+                "year": "2024",
+                "company": "El Gato y La Caja / GridX"
+            },
+            "bancantes-platform": {
+                "title": "Bancantes: Motor Fintech y Membresía",
+                "shortDescription": "Plataforma de membresía personalizada con un 'Escudo contra la Inflación' automatizado y gamificación 3D.",
+                "fullDescription": "Un ecosistema de membresía a medida sirviendo a 1,500+ suscriptores mensuales. A diferencia de herramientas SaaS estándar, esta plataforma fue diseñada para manejar la volatilidad económica específica de la región mientras mantiene a los usuarios comprometidos a través de la gamificación.",
+                "impact": {
+                    "0": "Ingeniería de un 'Motor de Ajuste por Inflación' único: Un sistema Cron opt-in que obtiene datos del Índice de Precios al Consumidor (IPC) vía API y actualiza automáticamente los valores de suscripción trimestralmente",
+                    "1": "Desarrollo de una Capa de Orquestación de Pagos unificada disparando transacciones vía MercadoPago, PayPal y APIs de CBU (Débito Bancario)",
+                    "2": "Construcción de un 'Creador de Avatares 3D' WebGL (Three.js) permitiendo a los usuarios diseñar, descargar y compartir activos digitales de marca",
+                    "3": "Gestión de la migración y estabilidad de 1,500+ suscriptores recurrentes activos"
+                },
+                "year": "2022",
+                "company": "El Gato y La Caja"
+            },
+            "el-gato-migration": {
+                "title": "Migración a Arquitectura Headless",
+                "shortDescription": "Orquestando la transición de una plataforma de medios masivos a Serverless Next.js.",
+                "fullDescription": "Arquitectura de la migración completa de El Gato y La Caja de un VPS WordPress monolítico a una arquitectura Headless desacoplada. El objetivo era mantener la flexibilidad editorial de WordPress mientras se lograba el rendimiento y seguridad de un frontend estático.",
+                "impact": {
+                    "0": "Migración de 6 años de contenido a Next.js (App Router) con Regeneración Estática Incremental (ISR)",
+                    "1": "Desarrollo de 'Revalidación Inteligente': Un plugin WP personalizado que dispara purgas de caché precisas, reduciendo costos de procesamiento",
+                    "2": "Desarrollo de bloques Gutenberg personalizados que renderizan componentes React idénticos tanto en el Admin como en el Frontend",
+                    "3": "Reducción de costos de hosting descargando medios a S3 Buckets vía plugin hecho a medida"
+                },
+                "year": "2023",
+                "company": "El Gato y La Caja"
+            },
+            "extras-middleware": {
+                "title": "Middleware E-commerce",
+                "shortDescription": "Extendiendo Tiendanube con lógica de inventario personalizada, generación programática de activos y mejores analíticas.",
+                "fullDescription": "Un servicio backend construido para parchar las limitaciones de la plataforma de e-commerce Tiendanube. Actúa como un puente entre la tienda, el depósito y el usuario.",
+                "impact": {
+                    "0": "Ingeniería de lógica de 'Bundling Virtual' para sincronizar stock entre productos compuestos en tiempo real",
+                    "1": "Construcción de sistema de Gift Cards programático que genera códigos únicos y renderiza PNGs de alta resolución imprimibles al vuelo",
+                    "2": "Extensión de productos con funcionalidad de 'Pre-venta' para permitir a usuarios comprar productos antes de estar disponibles",
+                    "3": "Extensión de la UI del Panel de Admin de Tiendanube usando Nexo SDK para operaciones fluidas del personal",
+                    "4": "Automatización de la entrega de bienes digitales",
+                    "5": "Construcción de micro-frontend que inserta productos de Tiendanube en tiempo real directamente dentro del contenido editorial para convertir lectores gratuitos en compradores sin interrumpir su experiencia de lectura.",
+                    "6": "Creación de Dashboard usando Looker Studio para que personal y autores visualicen datos de ventas y niveles de inventario"
+                },
+                "year": "2021",
+                "company": "El Gato y La Caja"
+            },
+            "scrollytelling-suite": {
+                "title": "Periodismo de Datos Interactivo",
+                "shortDescription": "Suite de plataformas de storytelling de alto impacto para datasets sociales complejos.",
+                "fullDescription": "Ingeniero líder para múltiples proyectos de periodismo de datos. Especializado en transformar datasets densos (brechas de género, métricas de pobreza, derechos de discapacidad) en experiencias web emocionales y accesibles.",
+                "impact": {
+                    "0": "Futuro Programado: Visualización de la brecha de género en tech con animaciones SVG personalizadas",
+                    "1": "Parece Elemental: Optimización de scrollytelling con medios pesados para dispositivos de gama baja en áreas con conectividad limitada",
+                    "2": "CLACAI: Construcción de plataforma compatible con WCAG 2.1 AA específicamente para lectores de pantalla y navegación por teclado",
+                    "3": "Eureka 3D Reading Experience: Un libro interactivo para niños corriendo en el navegador"
+                },
+                "year": "2019-2023",
+                "company": "El Gato y La Caja / Varios Clientes"
+            },
+            "cybershock-game": {
+                "title": "Cybershock: Future Parkour",
+                "shortDescription": "Runner 3D comercial lanzado en Steam.",
+                "fullDescription": "Un runner 3D de alta velocidad construido en Unity. Fui el único responsable de la ingeniería de física principal, loops de juego y sistemas de UI.",
+                "impact": {
+                    "0": "Lanzamiento de un título comercial, gestionando el ciclo de vida completo de publicación",
+                    "1": "Controlador de personaje personalizado",
+                    "2": "Implementación de object pooling agresivo para rendimiento",
+                    "3": "3000+ descargas y feedback abrumadoramente positivo en Steam"
+                },
+                "year": "2020",
+                "company": "Independiente"
+            }
+        }
+    },
+    "TechStack": {
+        "title": "Stack Tecnológico",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "gameMobile": "Juegos y Móvil",
+        "devops": "DevOps"
+    }
+}

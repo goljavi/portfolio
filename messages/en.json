@@ -1,0 +1,156 @@
+{
+    "Metadata": {
+        "title": "Javier Goldschmidt | Senior Full Stack Engineer",
+        "description": "Building digital science platforms and scalable web systems. Currently at El Gato y La Caja."
+    },
+    "Hero": {
+        "title": "Javier Goldschmidt",
+        "role": "Senior Full Stack Engineer",
+        "description": "Building scalable systems and responsive digital platforms for the web.",
+        "about1": "I'm a developer with <highlight>12 years of experience</highlight> building everything from video games in Unity to complex web platforms. My work sits at the intersection of <highlight>robust engineering</highlight> and <highlight>thoughtful product design</highlight>.",
+        "about2": "Currently, I'm a Senior Engineer at <link>El Gato y La Caja</link>, where I've spent the last 9 years building digital infrastructure for a mass-media science platform—from custom SSO systems to analytics dashboards and e-commerce integrations.",
+        "about3": "I specialize in <highlight>responsive React frontends</highlight> and <highlight>complex Node/PHP backends</highlight>, with deep roots in game development and native mobile apps."
+    },
+    "Nav": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "Contact": {
+        "title": "Contact",
+        "description": "If you'd like to discuss a project or just say hi, I'm always open to conversation.",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
+    "Timeline": {
+        "experience": "Experience",
+        "education": "Education",
+        "entries": {
+            "elgato": {
+                "period": "2017 — Present",
+                "title": "Full Stack Developer",
+                "company": "El Gato y La Caja",
+                "description": "Started as the first technical hire. Built the foundational web stack and established engineering practices that scaled with the company. Now leading development of digital infrastructure for a mass-media science platform. Built SSO systems, analytics tools, and e-commerce integrations serving 50k+ users."
+            },
+            "freelance": {
+                "period": "2014 — 2017",
+                "title": "Web & Mobile Developer",
+                "description": "Freelance work building Web and Android applications. Shipped multiple projects and learned the foundations of performance optimization and user experience."
+            },
+            "university": {
+                "period": "2025 — Present",
+                "title": "Bachelor's Degree in Digital Technologies",
+                "company": "Universidad de la Ciudad de Buenos Aires"
+            },
+            "davinci": {
+                "period": "2017 — 2020",
+                "title": "Videogame Development Technician",
+                "company": "Escuela Da Vinci"
+            },
+            "udacity": {
+                "period": "2016",
+                "title": "Android Development Nanodegree",
+                "company": "Udacity + Google"
+            },
+            "fader": {
+                "period": "2010 — 2015",
+                "title": "Advertising Design & Promotion",
+                "company": "Fernando Fader Technical School"
+            }
+        }
+    },
+    "SelectedWork": {
+        "title": "Featured Work",
+        "projects": {
+            "gridx-ecosystem": {
+                "title": "GridX: Deep Tech Ecosystem Platform",
+                "shortDescription": "High-performance platform for LatAm's largest Biotech Company Builder.",
+                "fullDescription": "The central digital hub for a biotech startup incubator. We needed a platform that could serve complex scientific data to global investors while remaining easy for non-technical staff to update.",
+                "impact": {
+                    "0": "Architected a scalable Internationalization (i18n) system serving content in English, Spanish, and Portuguese with low latency",
+                    "1": "WordPress-controlled frontend & form builder where admins can route submissions to specific Airtable bases or Emails based on logic",
+                    "2": "Implemented high-performance video optimization for AI-generated assets, ensuring fast Time-to-Interactive (TTI)",
+                    "3": "Built a dynamic portfolio system managing data for 90+ startups with real-time filtering"
+                },
+                "year": "2024",
+                "company": "El Gato y La Caja / GridX"
+            },
+            "bancantes-platform": {
+                "title": "Bancantes: Membership & Fintech Engine",
+                "shortDescription": "Custom membership platform with an automated 'Inflation Shield' and 3D gamification.",
+                "fullDescription": "A bespoke membership ecosystem serving 1,500+ monthly subscribers. Unlike standard SaaS tools, this platform was engineered to handle the specific economic volatility of the region while keeping users engaged through gamification.",
+                "impact": {
+                    "0": "Engineered a unique 'Inflation Adjustment Engine': An opt-in Cron system that fetches Consumer Price Index (IPC) data via API and automatically updates subscription values quarterly",
+                    "1": "Developed a unified Payment Orchestration Layer triggering transactions via MercadoPago, PayPal, and CBU (Bank Debit) APIs",
+                    "2": "Built a WebGL '3D Avatar Creator' (Three.js) allowing users to design, download, and share branded digital assets",
+                    "3": "Managed the migration and stability of 1,500+ active recurring subscribers"
+                },
+                "year": "2022",
+                "company": "El Gato y La Caja"
+            },
+            "el-gato-migration": {
+                "title": "Headless Architecture Migration",
+                "shortDescription": "Orchestrating the transition of a mass-media platform to Serverless Next.js.",
+                "fullDescription": "Architected the complete migration of El Gato y La Caja from a monolithic WordPress VPS to a decoupled Headless architecture. The goal was to maintain the editorial flexibility of WordPress while achieving the performance and security of a static frontend.",
+                "impact": {
+                    "0": "Migrated 6 years of content to Next.js (App Router) with Incremental Static Regeneration (ISR)",
+                    "1": "Developed 'Smart Revalidation': A custom WP plugin that triggers precise cache purges, reducing processing costs",
+                    "2": "Developed custom Gutenberg blocks that render identical React components in both the Admin and Frontend",
+                    "3": "Reduced hosting costs by offloading media to S3 Buckets via custom-made plugin"
+                },
+                "year": "2023",
+                "company": "El Gato y La Caja"
+            },
+            "extras-middleware": {
+                "title": "E-commerce Middleware",
+                "shortDescription": "Extending Tiendanube with custom inventory logic, programmatic asset generation and better analytics.",
+                "fullDescription": "A backend service built to patch the limitations of Tiendanube e-commerce platform. It acts as a bridge between the storefront, the warehouse, and the user.",
+                "impact": {
+                    "0": "Engineered 'Virtual Bundling' logic to sync stock across compound products in real-time",
+                    "1": "Built a programmatic Gift Card system that generates unique codes and renders printable high-res PNGs on the fly",
+                    "2": "Extended products with 'Pre-sale' functionality to allow users to purchase products before they are available",
+                    "3": "Extended the Tiendanube Admin Panel UI using Nexo SDK for seamless staff operations",
+                    "4": "Automated the delivery of digital goods",
+                    "5": "Built a micro-frontend that embeds real-time Tiendanube products directly inside editorial content to convert free readers into buyers without interrupting their reading experience.",
+                    "6": "Made a permission-based Dashboard using Looker Studio so staff and authors could visualize sales data and inventory levels"
+                },
+                "year": "2021",
+                "company": "El Gato y La Caja"
+            },
+            "scrollytelling-suite": {
+                "title": "Interactive Data Journalism",
+                "shortDescription": "Suite of high-impact storytelling platforms for complex social datasets.",
+                "fullDescription": "Lead engineer for multiple data journalism projects. Specialized in transforming dense datasets (gender gaps, poverty metrics, disability rights) into emotional, accessible web experiences.",
+                "impact": {
+                    "0": "Futuro Programado: Visualize the gender gap in tech with custom SVG animations",
+                    "1": "Parece Elemental: Optimización de scrollytelling con medios pesados para dispositivos de gama baja en áreas con conectividad limitada",
+                    "2": "CLACAI: Built a WCAG 2.1 AA compliant platform specifically for screen readers and keyboard navigation",
+                    "3": "Eureka 3D Reading Experience: A physics-based interactive book for children running in the browser"
+                },
+                "year": "2019-2023",
+                "company": "El Gato y La Caja / Various Clients"
+            },
+            "cybershock-game": {
+                "title": "Cybershock: Future Parkour",
+                "shortDescription": "Commercial 3D runner released on Steam.",
+                "fullDescription": "A high-octane 3D runner built in Unity. I was solely responsible for the engineering of core physics, gameplay loops, and UI systems.",
+                "impact": {
+                    "0": "Shipped a commercial title, managing the full release lifecycle",
+                    "1": "Engineered a custom physics-based character controller",
+                    "2": "Implemented aggressive object pooling for performance",
+                    "3": "3000+ downloads and overwhelmingly positive feedback on Steam"
+                },
+                "year": "2020",
+                "company": "Independent"
+            }
+        }
+    },
+    "TechStack": {
+        "title": "Stack",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "gameMobile": "Game & Mobile",
+        "devops": "DevOps"
+    }
+}

@@ -1,76 +1,123 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ExternalLink, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { createPortal } from "react-dom";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTranslations } from 'next-intl';
 
-interface Project {
-  title: string;
-  description: string;
-  impact: string[];
-  tags: string[];
-  period: string;
-  images: string[];
+import extrasMiddleware1 from "@/components/images/extras-middleware-1.png";
+import extrasMiddleware2 from "@/components/images/extras-middleware-2.png";
+import extrasMiddleware3 from "@/components/images/extras-middleware-3.png";
+import extrasMiddleware4 from "@/components/images/extras-middleware-4.png";
+import gridxEcosystem1 from "@/components/images/gridx-ecosystem-1.png";
+import gridxEcosystem2 from "@/components/images/gridx-ecosystem-2.png";
+import gridxEcosystem3 from "@/components/images/gridx-ecosystem-3.png";
+import gridxEcosystem4 from "@/components/images/gridx-ecosystem-4.png";
+import gridxEcosystem5 from "@/components/images/gridx-ecosystem-5.png";
+import gridxEcosystem6 from "@/components/images/gridx-ecosystem-6.png";
+import bancantes1 from "@/components/images/bancantes-1.png";
+import bancantes2 from "@/components/images/bancantes-2.png";
+import bancantes3 from "@/components/images/bancantes-3.png";
+import bancantes4 from "@/components/images/bancantes-4.png";
+import elGatoMigration1 from "@/components/images/el-gato-migration-1.png";
+import elGatoMigration2 from "@/components/images/el-gato-migration-2.png";
+import elGatoMigration3 from "@/components/images/el-gato-migration-3.png";
+import scrollytellingSuite1 from "@/components/images/scrollytelling-suite-1.png";
+import scrollytellingSuite2 from "@/components/images/scrollytelling-suite-2.png";
+import scrollytellingSuite3 from "@/components/images/scrollytelling-suite-3.png";
+import scrollytellingSuite4 from "@/components/images/scrollytelling-suite-4.png";
+import cybershockGame1 from "@/components/images/cybershock-game-1.jpg";
+import cybershockGame2 from "@/components/images/cybershock-game-2.jpg";
+import cybershockGame3 from "@/components/images/cybershock-game-3.jpg";
+import Link from "next/link";
+
+interface ProjectBase {
+  id: string;
+  stack: string[];
+  link: string;
+  images: StaticImageData[];
 }
 
-const projects: Project[] = [
+const projectsData: ProjectBase[] = [
   {
-    title: "Single Sign-On System",
-    description:
-      "Designed and built a custom OAuth2-based SSO system to unify user identity across multiple platforms—editorial, e-commerce, and experimental labs.",
-    impact: [
-      "Unified identity for 50,000+ community members",
-      "Reduced login friction across 3 separate platforms",
-      "Implemented secure token handoff and session management",
-    ],
-    tags: ["Node.js", "OAuth2", "PostgreSQL", "Security"],
-    period: "El Gato y La Caja",
+    "id": "gridx-ecosystem",
+    "stack": ["Next.js", "WordPress Headless", "Airtable API", "i18n Routing", "AI Media"],
+    "link": "https://gridexponential.com",
     images: [
-      "/projects/sso-1.jpg",
-      "/projects/sso-2.jpg",
-      "/projects/sso-3.jpg",
-      "/projects/sso-4.jpg",
-    ],
+      gridxEcosystem1,
+      gridxEcosystem2,
+      gridxEcosystem3,
+      gridxEcosystem4,
+      gridxEcosystem5,
+      gridxEcosystem6,
+    ]
   },
   {
-    title: "Custom Analytics & URL Shortener",
-    description:
-      "Built an internal URL shortener with advanced tracking to enable offline-to-online conversion tracking for physical publishing—QR codes in printed books link back to digital content.",
-    impact: [
-      "Enabled campaign tracking for print media",
-      "Real-time analytics dashboard for marketing team",
-      "High-performance redirect service handling thousands of daily requests",
-    ],
-    tags: ["Node.js", "Redis", "React", "Analytics"],
-    period: "El Gato y La Caja",
+    "id": "bancantes-platform",
+    "stack": ["PHP", "CodeIgniter", "MercadoPago API", "Cron Jobs", "Three.js"],
+    "link": "https://bancar.elgatoylacaja.com",
     images: [
-      "/projects/analytics-1.jpg",
-      "/projects/analytics-2.jpg",
-      "/projects/analytics-3.jpg",
-      "/projects/analytics-4.jpg",
-    ],
+      bancantes1,
+      bancantes2,
+      bancantes3,
+      bancantes4,
+    ]
   },
   {
-    title: "Citizen Science Platform",
-    description:
-      "Frontend architecture for interactive experiments that collected real-time data from thousands of concurrent users during live broadcasts and events.",
-    impact: [
-      "Handled traffic spikes during live TV appearances",
-      "Real-time data visualization for researchers",
-      "Gamified interfaces that boosted participation rates",
-    ],
-    tags: ["React", "WebSocket", "D3.js", "Data Viz"],
-    period: "El Gato y La Caja",
+    "id": "el-gato-migration",
+    "stack": ["Next.js", "WordPress Headless", "Docker", "AWS S3", "Vercel"],
+    "link": "https://elgatoylacaja.com",
     images: [
-      "/projects/science-1.jpg",
-      "/projects/science-2.jpg",
-      "/projects/science-3.jpg",
-      "/projects/science-4.jpg",
-    ],
+      elGatoMigration1,
+      elGatoMigration2,
+      elGatoMigration3,
+    ]
   },
+  {
+    "id": "extras-middleware",
+    "stack": ["Node.js", "Tiendanube API", "ImageMagick", "Nexo SDK", "Looker Studio", "BigQuery"],
+    "link": "https://tienda.elgatoylacaja.com",
+    images: [
+      extrasMiddleware1,
+      extrasMiddleware2,
+      extrasMiddleware3,
+      extrasMiddleware4,
+    ]
+  },
+  {
+    "id": "scrollytelling-suite",
+    "stack": ["React", "Framer Motion", "D3.js", "Three.js", "Accessibility (A11y)"],
+    "link": "https://chicasentecnologia.org/futuro-programado/",
+    images: [
+      scrollytellingSuite1,
+      scrollytellingSuite2,
+      scrollytellingSuite3,
+      scrollytellingSuite4,
+    ]
+  },
+  {
+    "id": "cybershock-game",
+    "stack": ["Unity", "C#", "Steamworks API", "Game Design"],
+    "link": "https://store.steampowered.com/app/1365030/Cybershock_Future_Parkour/",
+    images: [
+      cybershockGame1,
+      cybershockGame2,
+      cybershockGame3,
+    ]
+  }
 ];
+
+interface Project extends ProjectBase {
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+  impact: string[];
+  year: string;
+  company: string;
+}
 
 function Lightbox({
   images,
@@ -80,14 +127,17 @@ function Lightbox({
   onPrevious,
   onNext,
 }: {
-  images: string[];
+  images: StaticImageData[];
   title: string;
   currentIndex: number;
   onClose: () => void;
   onPrevious: () => void;
   onNext: () => void;
 }) {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft") onPrevious();
@@ -101,10 +151,16 @@ function Lightbox({
     };
   }, [onClose, onPrevious, onNext]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm"
-      onClick={onClose}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-sm"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClose();
+      }}
       onKeyDown={(e) => e.key === "Enter" && onClose()}
       role="dialog"
       aria-modal="true"
@@ -112,7 +168,11 @@ function Lightbox({
     >
       <button
         type="button"
-        onClick={onClose}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onClose();
+        }}
         className="absolute right-4 top-4 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
         aria-label="Close lightbox"
       >
@@ -163,11 +223,12 @@ function Lightbox({
           {currentIndex + 1} / {images.length}
         </span>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
-function ProjectGallery({ images, title }: { images: string[]; title: string }) {
+function ProjectGallery({ images, title }: { images: StaticImageData[]; title: string }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -193,14 +254,18 @@ function ProjectGallery({ images, title }: { images: string[]; title: string }) 
       <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
         {images.map((image, index) => (
           <button
-            key={image}
+            key={index}
             type="button"
-            onClick={() => openLightbox(index)}
-            className="relative h-14 w-20 flex-shrink-0 overflow-hidden rounded border border-border transition-all hover:border-primary hover:opacity-90"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              openLightbox(index);
+            }}
+            className="relative h-14 w-20 flex-shrink-0 overflow-hidden rounded border border-border transition-all hover:border-primary hover:opacity-90 cursor-pointer"
             aria-label={`View ${title} screenshot ${index + 1}`}
           >
             <Image
-              src={image || "/placeholder.svg"}
+              src={image}
               alt={`${title} thumbnail ${index + 1}`}
               fill
               className="object-cover"
@@ -228,71 +293,85 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <article
-      ref={ref}
-      className={`group rounded-lg border border-border bg-card p-6 transition-all duration-700 ease-out hover:border-primary/50 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <ProjectGallery images={project.images} title={project.title} />
-
-      <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">
-            {project.title}
-          </h3>
-          <p className="text-sm text-primary">{project.period}</p>
-        </div>
+    <Link href={project.link} target="_blank">
+      <article
+        ref={ref}
+        className={`group rounded-lg border border-border bg-card p-6 transition-all duration-700 ease-out hover:border-primary/50 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        style={{ transitionDelay: `${index * 100}ms` }}
+      >
         <button
           type="button"
-          className="text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100"
+          className="text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 absolute right-4 top-4"
           aria-label="View project details"
         >
           <ExternalLink className="h-4 w-4" />
         </button>
-      </div>
+        {project.images && <ProjectGallery images={project.images} title={project.title} />}
 
-      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-        {project.description}
-      </p>
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">
+              {project.title}
+            </h3>
+            <h4 className="mb-2 text-sm text-foreground">
+              {project.shortDescription}
+            </h4>
+            <p className="text-sm text-primary">{project.company}</p>
+          </div>
+        </div>
 
-      <ul className="mb-4 space-y-1">
-        {project.impact.map((item) => (
-          <li
-            key={item}
-            className="flex items-start gap-2 text-sm text-muted-foreground"
-          >
-            <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-primary" />
-            {item}
-          </li>
-        ))}
-      </ul>
+        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+          {project.fullDescription}
+        </p>
 
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <Badge key={tag} variant="secondary" className="text-xs font-normal">
-            {tag}
-          </Badge>
-        ))}
-      </div>
-    </article>
+        <ul className="mb-4 space-y-1">
+          {project.impact.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-2 text-sm text-muted-foreground"
+            >
+              <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-primary" />
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-2">
+          {project.stack.map((tag) => (
+            <Badge key={tag} variant="secondary" className="text-xs font-normal">
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </article>
+    </Link>
   );
 }
 
 export function SelectedWork() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const t = useTranslations('SelectedWork');
+
+  const projects: Project[] = projectsData.map((project) => ({
+    ...project,
+    title: t(`projects.${project.id}.title`),
+    shortDescription: t(`projects.${project.id}.shortDescription`),
+    fullDescription: t(`projects.${project.id}.fullDescription`),
+    impact: Object.values(t.raw(`projects.${project.id}.impact`) as Record<string, string>),
+    year: t(`projects.${project.id}.year`),
+    company: t(`projects.${project.id}.company`),
+  }));
 
   return (
     <section className="mb-24">
       <div
         ref={ref}
-        className={`mb-8 flex items-center gap-4 transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
+        className={`mb-8 flex items-center gap-4 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
       >
         <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-          Selected Work
+          {t('title')}
         </h2>
         <div className="h-px flex-1 bg-border" />
       </div>

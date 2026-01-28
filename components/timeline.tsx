@@ -6,31 +6,8 @@ interface TimelineItem {
   period: string;
   title: string;
   company?: string;
-  description: string;
+  description?: string;
 }
-
-const timeline: TimelineItem[] = [
-  {
-    period: "2017 — Present",
-    title: "Senior Full Stack Engineer",
-    company: "El Gato y La Caja",
-    description:
-      "Leading development of digital infrastructure for a mass-media science platform. Built SSO systems, analytics tools, and e-commerce integrations serving 50k+ users.",
-  },
-  {
-    period: "2014 — 2017",
-    title: "Full Stack Developer",
-    company: "El Gato y La Caja",
-    description:
-      "Started as the first technical hire. Built the foundational web stack and established engineering practices that scaled with the company.",
-  },
-  {
-    period: "2012 — 2014",
-    title: "Mobile & Game Developer",
-    description:
-      "Freelance work building Android applications and Unity games. Shipped multiple titles and learned the foundations of performance optimization and user experience.",
-  },
-];
 
 function TimelineEntry({
   item,
@@ -44,9 +21,8 @@ function TimelineEntry({
   return (
     <article
       ref={ref}
-      className={`grid gap-4 md:grid-cols-[140px_1fr] md:gap-8 transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      }`}
+      className={`grid gap-4 md:grid-cols-[140px_1fr] md:gap-8 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <p className="text-sm text-muted-foreground">{item.period}</p>
@@ -68,19 +44,18 @@ function TimelineEntry({
   );
 }
 
-export function Timeline() {
+export function Timeline({ timeline, title }: { timeline: TimelineItem[], title: string }) {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
     <section className="mb-24">
       <div
         ref={ref}
-        className={`mb-8 flex items-center gap-4 transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
+        className={`mb-8 flex items-center gap-4 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
       >
         <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-          Experience
+          {title}
         </h2>
         <div className="h-px flex-1 bg-border" />
       </div>

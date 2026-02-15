@@ -1,11 +1,11 @@
 {
     "Metadata": {
         "title": "Javier Goldschmidt | Desarrollador Full Stack",
-        "description": "Desarrollador Full Stack con 12 años de experiencia construyendo plataformas digitales y sistemas web escalables. Especializado en React, Next.js y Python. Actualmente en El Gato y La Caja."
+        "description": "Desarrollador Full Stack viviendo en Buenos Aires, Argentina, con 12 años de experiencia construyendo plataformas digitales y sistemas web escalables. Especializado en React, Next.js y Python. Actualmente en El Gato y La Caja."
     },
     "Hero": {
         "title": "Javier Goldschmidt",
-        "about1": "Soy desarrollador con <highlight>12 años de experiencia</highlight> creando desde videojuegos en Unity hasta plataformas web complejas. Mi trabajo se encuentra en la intersección entre <highlight>código</highlight> y <highlight>diseño de producto</highlight>.",
+        "about1": "Soy desarrollador y vivo en <highlight>Capital Federal, Buenos Aires, Argentina</highlight>. Tengo <highlight>12 años de experiencia</highlight> creando soluciones diversas, desde videojuegos en Unity hasta plataformas web complejas. Mi trabajo se encuentra en la intersección entre <highlight>código</highlight> y <highlight>diseño de producto</highlight>.",
         "about2": "Actualmente, soy Desarrollador Full Stack en <link>El Gato y La Caja</link>, donde hace 9 años construyo la infraestructura digital para su plataforma de comunicación científica. Desde sistemas de login hasta dashboards de analíticas e integraciones de e-commerce.",
         "about3": "Me especializo en <highlight>frontends responsivos en React</highlight> y <highlight>backends en Node, PHP y Python</highlight>. También tengo experiencia desarrollando videojuegos y aplicaciones móviles nativas."
     },
@@ -35,7 +35,7 @@
                 "period": "2025 — Presente",
                 "title": "Licenciatura en Tecnologías Digitales",
                 "company": "Universidad de la Ciudad de Buenos Aires",
-                "description": "Formalizando mi experiencia práctica con bases académicas sólidas en gestión integral de proyectos."
+                "description": "Formalizando mi experiencia práctica con bases académicas en gestión integral de proyectos."
             },
             "davinci": {
                 "period": "2017 — 2020",

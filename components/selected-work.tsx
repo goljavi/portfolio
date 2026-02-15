@@ -343,7 +343,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-primary" />
               {link ? (
                 <Link href={link} target="_blank" className="hover:underline hover:text-primary transition-colors">
-                  {text}
+                  {text} <ExternalLink className="h-4 w-4 inline-block ml-1" />
                 </Link>
               ) : (
                 <span>{text}</span>

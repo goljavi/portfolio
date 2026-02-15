@@ -34,22 +34,26 @@
             "university": {
                 "period": "2025 — Present",
                 "title": "Bachelor's Degree in Digital Technologies",
-                "company": "Universidad de la Ciudad de Buenos Aires"
+                "company": "Universidad de la Ciudad de Buenos Aires",
+                "description": "Backing my practical experience with academic foundations in project management."
             },
             "davinci": {
                 "period": "2017 — 2020",
                 "title": "Videogame Development Technician",
-                "company": "Escuela Da Vinci"
+                "company": "Escuela Da Vinci",
+                "description": "Learned to build immersive user experiences that go beyond standard web interfaces."
             },
             "udacity": {
-                "period": "2016",
+                "period": "2016 - 2017",
                 "title": "Android Development Nanodegree",
-                "company": "Udacity + Google"
+                "company": "Udacity + Google",
+                "description": "Google-certified training in native development. Gained critical insight into device constraints and offline-first principles that I now apply to modern web applications."
             },
             "fader": {
                 "period": "2010 — 2015",
                 "title": "Advertising Design & Promotion",
-                "company": "Fernando Fader Technical School"
+                "company": "Fernando Fader Technical School",
+                "description": "Fundamentals of design, visual communication and marketing strategies."
             }
         }
     },

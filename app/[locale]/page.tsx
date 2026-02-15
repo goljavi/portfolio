@@ -10,14 +10,14 @@ export default function Home() {
   const tTimeline = useTranslations('Timeline');
 
   const experience = ['elgato', 'freelance'].map(key => ({
-    period: tTimeline(`entries.${key}.period`),
+    period: tTimeline.raw(`entries.${key}.period`),
     title: tTimeline(`entries.${key}.title`),
     company: tTimeline.has(`entries.${key}.company`) ? tTimeline(`entries.${key}.company`) : undefined,
     description: tTimeline.has(`entries.${key}.description`) ? tTimeline(`entries.${key}.description`) : undefined,
   }));
 
   const education = ['university', 'davinci', 'udacity', 'fader'].map(key => ({
-    period: tTimeline(`entries.${key}.period`),
+    period: tTimeline.raw(`entries.${key}.period`),
     title: tTimeline(`entries.${key}.title`),
     company: tTimeline.has(`entries.${key}.company`) ? tTimeline(`entries.${key}.company`) : undefined,
     description: tTimeline.has(`entries.${key}.description`) ? tTimeline(`entries.${key}.description`) : undefined,

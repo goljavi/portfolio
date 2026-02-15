@@ -57,13 +57,13 @@ export function Hero() {
             >
               <Github className="h-5 w-5" />
             </Link>
-            <Link
+            <a
               href={t('cv')}
               className="text-muted-foreground transition-colors hover:text-primary"
               aria-label="Download CV"
             >
               <FileText className="h-5 w-5" />
-            </Link>
+            </a>
           </nav>
         </div>
 

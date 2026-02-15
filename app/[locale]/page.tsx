@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero";
 import { SelectedWork } from "@/components/selected-work";
 import { TechStack } from "@/components/tech-stack";
+import { Interests } from "@/components/interests";
 import { Timeline } from "@/components/timeline";
 import { Contact } from "@/components/contact";
 import { useTranslations } from 'next-intl';
@@ -30,6 +31,7 @@ export default function Home() {
         <TechStack />
         <Timeline timeline={experience} title={tTimeline('experience')} />
         <Timeline timeline={education} title={tTimeline('education')} />
+        <Interests />
         <Contact />
       </div>
     </main>

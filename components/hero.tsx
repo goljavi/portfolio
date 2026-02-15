@@ -31,15 +31,6 @@ export function Hero() {
 
           <nav className="flex items-center gap-4 pt-4">
             <Link
-              href="https://github.com/goljavi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-primary"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </Link>
-            <Link
               href="https://linkedin.com/in/javiergold"
               target="_blank"
               rel="noopener noreferrer"
@@ -54,6 +45,15 @@ export function Hero() {
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
+            </Link>
+            <Link
+              href="https://github.com/goljavi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors hover:text-primary"
+              aria-label="GitHub"
+            >
+              <Github className="h-5 w-5" />
             </Link>
             {/*<Link
               href="/cv.pdf"

@@ -158,5 +158,19 @@
         "backend": "Backend",
         "gameMobile": "Game & Mobile",
         "devops": "DevOps"
+    },
+    "Interests": {
+        "title": "Personal Interests",
+        "items": {
+            "videogames": "Videogames",
+            "biking": "Biking & Running",
+            "philosophy": "Reading & Philosophy",
+            "eatingFromAbroad": "International Cuisine",
+            "urbanism": "Traveling & Urbanism",
+            "trains": "Trains & Subways",
+            "electronicMusic": "Electronic Music",
+            "ai": "AI & Machine Learning",
+            "technology": "Science & Technology"
+        }
     }
 }

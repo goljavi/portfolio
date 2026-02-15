@@ -22,22 +22,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: t('title'),
         description: t('description'),
         generator: 'v0.app',
-        icons: {
-            icon: [
-                {
-                    url: '/icon-light-32x32.png',
-                    media: '(prefers-color-scheme: light)',
-                },
-                {
-                    url: '/icon-dark-32x32.png',
-                    media: '(prefers-color-scheme: dark)',
-                },
-                {
-                    url: '/icon.svg',
-                    type: 'image/svg+xml',
-                },
-            ],
-            apple: '/apple-icon.png',
+        openGraph: {
+            title: t('title'),
+            description: t('description'),
+            url: `https://javiergold-portfolio.vercel.app/${locale}`, // Assuming generic URL or use a placeholder if unsure
+            siteName: 'Javier Goldschmidt Portfolio',
+            locale: locale,
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: t('title'),
+            description: t('description'),
         },
     };
 }

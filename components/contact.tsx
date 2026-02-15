@@ -40,7 +40,7 @@ export function Contact() {
           <div>
             <p className="mb-1 text-sm text-muted-foreground">{t('email')}</p>
             <Link
-              href="mailto:you@example.com"
+              href="mailto:somossedentarios@gmail.com"
               className="text-sm font-medium text-foreground underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary"
             >
               somossedentarios@gmail.com

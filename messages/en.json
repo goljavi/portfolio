@@ -55,6 +55,7 @@
     },
     "SelectedWork": {
         "title": "Featured Projects",
+        "viewProject": "Open Website",
         "projects": {
             "gridx-ecosystem": {
                 "title": "GridX: Platform for Scientists and Investors",
@@ -116,10 +117,22 @@
                 "shortDescription": "Suite of storytelling platforms for complex social datasets.",
                 "fullDescription": "Development of multiple data journalism projects. Specialized in transforming datasets (gender gaps, poverty metrics, disability rights) into emotional, accessible web experiences.",
                 "impact": {
-                    "0": "Futuro Programado: Visualization of the gender gap in tech with custom SVG animations",
-                    "1": "Parece Elemental: Scrollytelling optimization with heavy media for low-end devices in areas with limited connectivity",
-                    "2": "CLACAI: Construction of a WCAG 2.1 AA compliant platform specifically for screen readers and keyboard navigation",
-                    "3": "Eureka 3D: An interactive book for children running in the browser"
+                    "0": {
+                        "text": "Futuro Programado: Visualization of the gender gap in tech with custom SVG animations",
+                        "link": "https://chicasentecnologia.org/futuro-programado/"
+                    },
+                    "1": {
+                        "text": "Parece Elemental: Scrollytelling optimization with heavy media for low-end devices in areas with limited connectivity",
+                        "link": "https://lapoderosa.elgatoylacaja.com/"
+                    },
+                    "2": {
+                        "text": "CLACAI: Construction of a WCAG 2.1 AA compliant platform specifically for screen readers and keyboard navigation",
+                        "link": "https://leyesdiscapacidad.clacai.org"
+                    },
+                    "3": {
+                        "text": "Eureka 3D: An interactive book for children running in the browser",
+                        "link": "https://guau.ar/eureka/leer/"
+                    }
                 },
                 "year": "2019-2023",
                 "company": "El Gato y La Caja / Various Clients"

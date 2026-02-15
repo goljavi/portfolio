@@ -55,13 +55,13 @@ export function Hero() {
             >
               <Mail className="h-5 w-5" />
             </Link>
-            <Link
+            {/*<Link
               href="/cv.pdf"
               className="text-muted-foreground transition-colors hover:text-primary"
               aria-label="Download CV"
             >
               <FileText className="h-5 w-5" />
-            </Link>
+            </Link>*/}
           </nav>
         </div>
 

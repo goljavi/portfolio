@@ -114,7 +114,7 @@ interface Project extends ProjectBase {
   title: string;
   shortDescription: string;
   fullDescription: string;
-  impact: string[];
+  impact: (string | { text: string; link: string })[];
   year: string;
   company: string;
 }
@@ -173,7 +173,7 @@ function Lightbox({
           e.stopPropagation();
           onClose();
         }}
-        className="absolute right-4 top-4 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
+        className="absolute z-10 cursor-pointer right-4 top-4 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
         aria-label="Close lightbox"
       >
         <X className="h-5 w-5" />
@@ -185,14 +185,14 @@ function Lightbox({
           e.stopPropagation();
           onPrevious();
         }}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
+        className="absolute z-10 cursor-pointer left-4 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
         aria-label="Previous image"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
 
       <div
-        className="relative mx-16 h-[80vh] w-full max-w-5xl"
+        className="relative h-[80vh] w-full max-w-5xl"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => e.stopPropagation()}
       >
@@ -212,7 +212,7 @@ function Lightbox({
           e.stopPropagation();
           onNext();
         }}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
+        className="absolute z-10 cursor-pointer right-4 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-2 text-foreground transition-colors hover:bg-secondary/80"
         aria-label="Next image"
       >
         <ChevronRight className="h-5 w-5" />
@@ -251,7 +251,7 @@ function ProjectGallery({ images, title }: { images: StaticImageData[]; title: s
 
   return (
     <>
-      <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
+      <div className="mb-4 mt-8 md:mt-0 flex gap-2 overflow-x-auto pb-1">
         {images.map((image, index) => (
           <button
             key={index}
@@ -261,7 +261,7 @@ function ProjectGallery({ images, title }: { images: StaticImageData[]; title: s
               e.stopPropagation();
               openLightbox(index);
             }}
-            className="relative h-14 w-20 flex-shrink-0 overflow-hidden rounded border border-border transition-all hover:border-primary hover:opacity-90 cursor-pointer"
+            className="relative h-20 w-28 flex-shrink-0 overflow-hidden rounded border border-border transition-all hover:border-primary hover:opacity-90 cursor-pointer"
             aria-label={`View ${title} screenshot ${index + 1}`}
           >
             <Image
@@ -269,7 +269,7 @@ function ProjectGallery({ images, title }: { images: StaticImageData[]; title: s
               alt={`${title} thumbnail ${index + 1}`}
               fill
               className="object-cover"
-              sizes="80px"
+              sizes="150px"
             />
           </button>
         ))}
@@ -291,61 +291,76 @@ function ProjectGallery({ images, title }: { images: StaticImageData[]; title: s
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const t = useTranslations('SelectedWork');
 
   return (
-    <Link href={project.link} target="_blank">
-      <article
-        ref={ref}
-        className={`group rounded-lg border border-border bg-card p-6 transition-all duration-700 ease-out hover:border-primary/50 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        style={{ transitionDelay: `${index * 100}ms` }}
+    <article
+      ref={ref}
+      className={`group rounded-lg border border-border bg-card p-6 transition-all duration-700 ease-out hover:border-primary/50 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <Link
+        href={project.link}
+        target="_blank"
+        className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+        aria-label="View project details"
       >
-        <button
-          type="button"
-          className="text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 absolute right-4 top-4"
-          aria-label="View project details"
-        >
-          <ExternalLink className="h-4 w-4" />
-        </button>
-        {project.images && <ProjectGallery images={project.images} title={project.title} />}
+        <span>{t('viewProject')}</span>
+        <ExternalLink className="h-3 w-3" />
+      </Link>
+      {project.images && <ProjectGallery images={project.images} title={project.title} />}
 
-        <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
-          <div>
+      <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
+        <div>
+          <Link href={project.link} target="_blank" className="hover:text-primary transition-colors">
             <h3 className="text-lg font-semibold text-foreground">
               {project.title}
             </h3>
-            <h4 className="mb-2 text-sm text-foreground">
-              {project.shortDescription}
-            </h4>
-            <p className="text-sm text-primary">{project.company}</p>
-          </div>
+          </Link>
+          <h4 className="mb-2 text-sm text-foreground">
+            {project.shortDescription}
+          </h4>
+          <p className="text-sm text-primary">{project.company}</p>
         </div>
+      </div>
 
-        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-          {project.fullDescription}
-        </p>
+      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+        {project.fullDescription}
+      </p>
 
-        <ul className="mb-4 space-y-1">
-          {project.impact.map((item) => (
+      <ul className="mb-4 space-y-1">
+        {project.impact.map((item, i) => {
+          const isObj = typeof item === 'object';
+          const text = isObj ? item.text : item;
+          const link = isObj ? item.link : undefined;
+
+          return (
             <li
-              key={item}
+              key={i}
               className="flex items-start gap-2 text-sm text-muted-foreground"
             >
               <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-primary" />
-              {item}
+              {link ? (
+                <Link href={link} target="_blank" className="hover:underline hover:text-primary transition-colors">
+                  {text}
+                </Link>
+              ) : (
+                <span>{text}</span>
+              )}
             </li>
-          ))}
-        </ul>
+          );
+        })}
+      </ul>
 
-        <div className="flex flex-wrap gap-2">
-          {project.stack.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs font-normal">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </article>
-    </Link>
+      <div className="flex flex-wrap gap-2">
+        {project.stack.map((tag) => (
+          <Badge key={tag} variant="secondary" className="text-xs font-normal">
+            {tag}
+          </Badge>
+        ))}
+      </div>
+    </article>
   );
 }
 
@@ -358,7 +373,7 @@ export function SelectedWork() {
     title: t(`projects.${project.id}.title`),
     shortDescription: t(`projects.${project.id}.shortDescription`),
     fullDescription: t(`projects.${project.id}.fullDescription`),
-    impact: Object.values(t.raw(`projects.${project.id}.impact`) as Record<string, string>),
+    impact: Object.values(t.raw(`projects.${project.id}.impact`) as Record<string, string | { text: string; link: string }>),
     year: t(`projects.${project.id}.year`),
     company: t(`projects.${project.id}.company`),
   }));
@@ -376,7 +391,7 @@ export function SelectedWork() {
         <div className="h-px flex-1 bg-border" />
       </div>
 
-      <div className="space-y-12">
+      <div className="flex gap-4 flex-col">
         {projects.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}

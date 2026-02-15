@@ -55,6 +55,7 @@
     },
     "SelectedWork": {
         "title": "Proyectos Destacados",
+        "viewProject": "Visitar Sitio",
         "projects": {
             "gridx-ecosystem": {
                 "title": "GridX: Plataforma para Científicos e Inversores",
@@ -116,10 +117,22 @@
                 "shortDescription": "Suite de plataformas de storytelling para datasets sociales complejos.",
                 "fullDescription": "Desarrollo de múltiples proyectos de periodismo de datos. Especializado en transformar datasets (brechas de género, métricas de pobreza, derechos de discapacidad) en experiencias web emocionales y accesibles.",
                 "impact": {
-                    "0": "Futuro Programado: Visualización de la brecha de género en tech con animaciones SVG personalizadas",
-                    "1": "Parece Elemental: Optimización de scrollytelling con imágenes pesadas para dispositivos de gama baja en áreas con conectividad limitada",
-                    "2": "CLACAI: Construcción de plataforma compatible con WCAG 2.1 AA específicamente para lectores de pantalla y navegación por teclado",
-                    "3": "Eureka 3D: Un libro interactivo para niños corriendo en el navegador"
+                    "0": {
+                        "text": "Futuro Programado: Visualización de la brecha de género en tech con animaciones SVG personalizadas",
+                        "link": "https://chicasentecnologia.org/futuro-programado/"
+                    },
+                    "1": {
+                        "text": "Parece Elemental: Optimización de scrollytelling con imágenes pesadas para dispositivos de gama baja en áreas con conectividad limitada",
+                        "link": "https://lapoderosa.elgatoylacaja.com/"
+                    },
+                    "2": {
+                        "text": "CLACAI: Construcción de plataforma compatible con WCAG 2.1 AA específicamente para lectores de pantalla y navegación por teclado",
+                        "link": "https://leyesdiscapacidad.clacai.org"
+                    },
+                    "3": {
+                        "text": "Eureka 3D: Un libro interactivo para niños corriendo en el navegador",
+                        "link": "https://guau.ar/eureka/leer/"
+                    }
                 },
                 "year": "2019-2023",
                 "company": "El Gato y La Caja / Varios Clientes"

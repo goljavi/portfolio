@@ -24,6 +24,8 @@ export function Hero() {
             width={200}
             height={200}
             className="rounded-full"
+            placeholder="blur"
+            priority
           />
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             {t('title')}

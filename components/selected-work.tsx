@@ -202,7 +202,7 @@ function Lightbox({
           fill
           className="object-contain"
           sizes="90vw"
-          priority
+          placeholder="blur"
         />
       </div>
 
@@ -270,6 +270,7 @@ function ProjectGallery({ images, title }: { images: StaticImageData[]; title: s
               fill
               className="object-cover"
               sizes="150px"
+              placeholder="blur"
             />
           </button>
         ))}

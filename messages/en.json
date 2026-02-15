@@ -1,12 +1,12 @@
 {
     "Metadata": {
         "title": "Javier Goldschmidt | Full Stack Developer",
-        "description": "Building digital platforms and scalable web systems. Currently at El Gato y La Caja."
+        "description": "Full Stack Developer with 12 years of experience building digital platforms and scalable web systems. Specializing in React, Next.js, and Python. Currently at El Gato y La Caja."
     },
     "Hero": {
         "title": "Javier Goldschmidt",
         "about1": "I'm a developer with <highlight>12 years of experience</highlight> building everything from video games in Unity to complex web platforms. My work sits at the intersection of <highlight>code</highlight> and <highlight>product design</highlight>.",
-        "about2": "Currently, I'm a Full Stack Developer at <link>El Gato y La Caja</link>, where I've spent the last 9 years building the digital infrastructure for its science communication platform and ecommerce. From login systems to analytics dashboards and e-commerce integrations.",
+        "about2": "Currently, I'm a Full Stack Developer at <link>El Gato y La Caja</link>, where I've spent the last 9 years building the digital infrastructure for its science communication platform. From login systems to analytics dashboards and e-commerce integrations.",
         "about3": "I specialize in <highlight>responsive React frontends</highlight> and <highlight>Node, PHP and Python backends</highlight>. I also have experience developing video games and native mobile applications."
     },
     "Contact": {

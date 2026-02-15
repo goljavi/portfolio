@@ -19,13 +19,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: 'Metadata' });
 
     return {
+        metadataBase: new URL('https://javiergold.ar'),
         title: t('title'),
         description: t('description'),
+        keywords: ["Full Stack Developer", "React", "Next.js", "Node.js", "Python", "Web Development", "Javier Goldschmidt", "Software Engineering"],
         generator: 'v0.app',
         openGraph: {
             title: t('title'),
             description: t('description'),
-            url: `https://javiergold-portfolio.vercel.app/${locale}`, // Assuming generic URL or use a placeholder if unsure
+            url: `https://javiergold.ar/${locale}`,
             siteName: 'Javier Goldschmidt Portfolio',
             locale: locale,
             type: 'website',

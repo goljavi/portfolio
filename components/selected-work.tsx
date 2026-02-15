@@ -78,7 +78,7 @@ const projectsData: ProjectBase[] = [
   },
   {
     "id": "extras-middleware",
-    "stack": ["Node.js", "Tiendanube API", "ImageMagick", "Nexo SDK", "Looker Studio", "BigQuery"],
+    "stack": ["Javascript", "PHP", "Codeigniter", "Tiendanube API", "Canvas", "Nexo SDK", "Looker Studio", "BigQuery"],
     "link": "https://tienda.elgatoylacaja.com",
     images: [
       extrasMiddleware1,

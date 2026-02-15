@@ -45,7 +45,7 @@ const projectsData: ProjectBase[] = [
   {
     "id": "gridx-ecosystem",
     "stack": ["Next.js", "WordPress Headless", "Airtable API", "i18n Routing", "AI Media"],
-    "link": "https://gridexponential.com",
+    "link": "https://gridx-website.vercel.app",
     images: [
       gridxEcosystem1,
       gridxEcosystem2,

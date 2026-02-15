@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     title: 'Javier Goldschmidt - Full Stack Developer',
     description: 'Full Stack Developer specializing in React, Next.js, Node.js, and Python. Building modern web applications with clean code and great user experiences.',
     keywords: ["Full Stack Developer", "React", "Next.js", "Node.js", "Python", "Web Development", "Javier Goldschmidt", "Software Engineering"],
-    generator: 'v0.app',
     openGraph: {
         title: 'Javier Goldschmidt - Full Stack Developer',
         description: 'Full Stack Developer specializing in React, Next.js, Node.js, and Python. Building modern web applications with clean code and great user experiences.',

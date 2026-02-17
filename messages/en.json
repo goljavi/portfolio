@@ -38,23 +38,23 @@
                 "company": "Universidad de la Ciudad de Buenos Aires",
                 "description": "Backing my practical experience with academic foundations in project management."
             },
+            "humai": {
+                "period": "2023 — 2024",
+                "title": "Applied Data Science & Machine Learning Certification",
+                "company": "Instituto Humai",
+                "description": "Focused on the Python ecosystem (Pandas, Scikit-Learn) for the full data lifecycle. This training enhances my capabilities in Business Intelligence and Data Journalism."
+            },
             "davinci": {
                 "period": "2017 — 2020",
-                "title": "Videogame Development Technician",
+                "title": "Virtual Simulator Designer and Developer",
                 "company": "Escuela Da Vinci",
-                "description": "Learned to build immersive user experiences that go beyond standard web interfaces."
+                "description": "Learned to build video games and immersive user experiences that go beyond standard web interfaces."
             },
             "udacity": {
                 "period": "2016 - 2017",
                 "title": "Android Development Nanodegree",
                 "company": "Udacity + Google",
                 "description": "Google-certified training in native development. Gained critical insight into device constraints and offline-first principles that I now apply to modern web applications."
-            },
-            "fader": {
-                "period": "2010 — 2015",
-                "title": "Advertising Design & Promotion",
-                "company": "Fernando Fader Technical School",
-                "description": "Fundamentals of design, visual communication and marketing strategies."
             }
         }
     },

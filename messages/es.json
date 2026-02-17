@@ -38,23 +38,23 @@
                 "company": "Universidad de la Ciudad de Buenos Aires",
                 "description": "Formalizando mi experiencia práctica con bases académicas en gestión integral de proyectos."
             },
+            "humai": {
+                "period": "2023 — 2024",
+                "title": "Certificación en Ciencia de Datos Aplicada & Machine Learning",
+                "company": "Instituto Humai",
+                "description": "Foco en el ecosistema Python (Pandas, Scikit-Learn) para el ciclo de vida completo de los datos. Esta formación potencia mis capacidades en Business Intelligence y Periodismo de Datos."
+            },
             "davinci": {
                 "period": "2017 — 2020",
-                "title": "Técnico en Desarrollo de Videojuegos",
+                "title": "Diseñador y Programador de Simuladores Virtuales",
                 "company": "Escuela Da Vinci",
-                "description": "Aprendí a construir experiencias inmersivas que superan los límites de las interfaces web tradicionales."
+                "description": "Aprendí a construir videojuegos y experiencias inmersivas que superan los límites de las interfaces web tradicionales."
             },
             "udacity": {
                 "period": "2016 — 2017",
                 "title": "Nanodegree en Desarrollo Android",
                 "company": "Udacity + Google",
                 "description": "Certificación de Google en desarrollo nativo. Profundicé en las limitaciones de hardware y principios offline-first, conocimientos que hoy aplico para optimizar aplicaciones web modernas."
-            },
-            "fader": {
-                "period": "2010 — 2015",
-                "title": "Diseño y Promoción Publicitaria",
-                "company": "Escuela Técnica Fernando Fader",
-                "description": "Fundamentos de diseño, comunicación visual y estrategias de marketing."
             }
         }
     },

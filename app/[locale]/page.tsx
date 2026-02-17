@@ -16,7 +16,7 @@ export default function Home() {
     description: tTimeline.has(`entries.${key}.description`) ? tTimeline(`entries.${key}.description`) : undefined,
   }));
 
-  const education = ['university', 'davinci', 'udacity', 'fader'].map(key => ({
+  const education = ['university', 'humai', 'davinci', 'udacity'].map(key => ({
     period: tTimeline.raw(`entries.${key}.period`),
     title: tTimeline(`entries.${key}.title`),
     company: tTimeline.has(`entries.${key}.company`) ? tTimeline(`entries.${key}.company`) : undefined,

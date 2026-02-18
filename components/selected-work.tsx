@@ -90,7 +90,7 @@ const projectsData: ProjectBase[] = [
   {
     "id": "scrollytelling-suite",
     "stack": ["React", "Framer Motion", "D3.js", "Three.js", "Accessibility (A11y)"],
-    "link": "https://chicasentecnologia.org/futuro-programado/",
+    "link": "https://cet.javiergold.ar/futuro-programado",
     images: [
       scrollytellingSuite1,
       scrollytellingSuite2,
